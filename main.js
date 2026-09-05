@@ -1,3 +1,4 @@
+require('dotenv').config();
 const { app, BrowserWindow, ipcMain, globalShortcut, screen, session, desktopCapturer, shell, dialog, systemPreferences } = require('electron');
 const path = require('path');
 const os = require('os');
@@ -844,3 +845,4 @@ app.on('window-all-closed', (e) => {
   if (permWin) { e.preventDefault(); return; }
   app.quit();
 });
+
